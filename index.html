@@ -1,20 +1,26 @@
-<<!doctype html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
-    <link href="css/style.css" rel="stylesheet" />
+    <title>Generador de Paletas</title>
+    <link href="src/style.css" rel="stylesheet" />
   </head>
-
   <body>
-    <main class="color-palette">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div>hola alexander tengo incluso ia si quiero</div>
+    <main>
+      <section
+        class="color-palette"
+        id="palette"
+        role="list"
+        aria-label="Paleta de colores"
+      >
+        <div class="color-block" role="listitem" data-index="0"></div>
+        <div class="color-block" role="listitem" data-index="1"></div>
+        <div class="color-block" role="listitem" data-index="2"></div>
+        <div class="color-block" role="listitem" data-index="3"></div>
+        <div class="color-block" role="listitem" data-index="4"></div>
+      </section>
     </main>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
