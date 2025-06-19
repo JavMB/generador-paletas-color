@@ -12,13 +12,13 @@ Por lo tanto, debes generar un string de 6 caracteres hexadecimales aleatorios.
 const hexChars = "0123456789abcdef";
 
 function generatePalette() {
-	let rgb = "#";
+  let rgb = "#";
 
-	for (let index = 0; index < 6; index++) {
-		rgb += randomChar(hexChars);
-	}
-	return rgb;
+  for (let index = 0; index < 6; index++) {
+    rgb += randomChar(hexChars);
+  }
+  return rgb;
 }
 function randomChar(chars: string): string {
-	return chars[Math.floor(Math.random() * chars.length)];
+  return chars[Math.floor(Math.random() * chars.length)];
 }
