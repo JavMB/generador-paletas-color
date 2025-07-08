@@ -1,12 +1,13 @@
 body {
   font-family: system-ui, sans-serif;
-  background: #f7fafc;
+  background: #c8dc92;
   margin: 0;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 main {
   background: #fff;
   border-radius: 1rem;
@@ -15,19 +16,40 @@ main {
   max-width: 540px;
   width: 100%;
 }
+
 .color-palette {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto auto;
   gap: 1rem;
   margin: 0 auto;
+  align-items: end;
 }
+
+#generate-button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 1.5rem;
+  width: 7rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 .color-block {
   height: 100px;
   border-radius: 0.7rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-  background: #ccc; /* color por defecto, luego se sobrescribe con JS */
+  background: #ccc;
+  /* color por defecto, luego se sobrescribe con JS */
   display: flex;
-  align-items: flex-end;asd
+  align-items: flex-end;
   justify-content: center;
   cursor: pointer;
   transition:
@@ -36,14 +58,17 @@ main {
   position: relative;
   overflow: hidden;
 }
+
 .color-block:active {
   transform: scale(0.97);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
+
 @media (max-width: 700px) {
   .color-palette {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .color-block {
     height: 70px;
   }
