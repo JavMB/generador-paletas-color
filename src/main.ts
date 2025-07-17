@@ -33,6 +33,14 @@ function generatePalettes(count: number): string[] {
 
 const generateButton = document.getElementById("generate-button");
 
+const ultimaPaleta = JSON.parse(localStorage.getItem("ultimaPaleta") || "[]");
+if (ultimaPaleta.length) {
+    const colorBlocks = document.querySelectorAll<HTMLDivElement>(".color-block");
+    colorBlocks.forEach((block, i) => {
+        block.style.backgroundColor = ultimaPaleta[i];
+    });
+}
+
 generateButton?.addEventListener("click", () => {
 	const palettes = generatePalettes(5);
 
@@ -41,5 +49,8 @@ generateButton?.addEventListener("click", () => {
 	colorBlocks.forEach((block, i) => {
 		block.style.backgroundColor = palettes[i];
 	});
+
+	localStorage.setItem("ultimaPaleta", JSON.stringify(palettes));
+
 	
 });
